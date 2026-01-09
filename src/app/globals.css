@@ -1,26 +1,149 @@
 @import "tailwindcss";
 
 :root {
+  /* ===== BACKGROUND COLORS ===== */
   --background: #ffffff;
-  --foreground: #171717;
-}
+  --background-secondary: #f9fafb;
+  --background-tertiary: #f3f4f6;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ===== TEXT COLORS ===== */
+  --foreground: #111827;
+  --foreground-secondary: #4b5563;
+  --foreground-muted: #9ca3af;
+  --foreground-inverse: #ffffff;
+
+  /* ===== BORDER COLORS ===== */
+  --border: #e5e7eb;
+  --border-secondary: #d1d5db;
+  --border-focus: #4f46e5;
+
+  /* ===== ACCENT COLORS (Muted Indigo) ===== */
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-light: #eef2ff;
+  --accent-muted: #c7d2fe;
+
+  /* ===== SEMANTIC COLORS ===== */
+  --success: #059669;
+  --success-light: #ecfdf5;
+  --success-border: #a7f3d0;
+
+  --warning: #d97706;
+  --warning-light: #fffbeb;
+  --warning-border: #fde68a;
+
+  --error: #dc2626;
+  --error-light: #fef2f2;
+  --error-border: #fecaca;
+
+  /* ===== COMPONENT TOKENS ===== */
+  --card-background: #ffffff;
+  --card-border: #e5e7eb;
+  --input-background: #ffffff;
+  --input-border: #d1d5db;
+  --input-placeholder: #9ca3af;
+
+  /* ===== RATING ===== */
+  --rating-filled: #fbbf24;
+  --rating-empty: #e5e7eb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* ===== BACKGROUND COLORS ===== */
+    --background: #111827;
+    --background-secondary: #1f2937;
+    --background-tertiary: #374151;
+
+    /* ===== TEXT COLORS ===== */
+    --foreground: #f9fafb;
+    --foreground-secondary: #d1d5db;
+    --foreground-muted: #6b7280;
+    --foreground-inverse: #111827;
+
+    /* ===== BORDER COLORS ===== */
+    --border: #374151;
+    --border-secondary: #4b5563;
+    --border-focus: #818cf8;
+
+    /* ===== ACCENT COLORS (Muted Indigo) ===== */
+    --accent: #818cf8;
+    --accent-hover: #6366f1;
+    --accent-light: #1e1b4b;
+    --accent-muted: #312e81;
+
+    /* ===== SEMANTIC COLORS ===== */
+    --success: #34d399;
+    --success-light: #064e3b;
+    --success-border: #065f46;
+
+    --warning: #fbbf24;
+    --warning-light: #78350f;
+    --warning-border: #92400e;
+
+    --error: #f87171;
+    --error-light: #7f1d1d;
+    --error-border: #991b1b;
+
+    /* ===== COMPONENT TOKENS ===== */
+    --card-background: #1f2937;
+    --card-border: #374151;
+    --input-background: #1f2937;
+    --input-border: #4b5563;
+    --input-placeholder: #6b7280;
+
+    /* ===== RATING ===== */
+    --rating-filled: #fbbf24;
+    --rating-empty: #374151;
   }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-inverse: var(--foreground-inverse);
+
+  --color-border: var(--border);
+  --color-border-secondary: var(--border-secondary);
+  --color-border-focus: var(--border-focus);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-accent-muted: var(--accent-muted);
+
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-success-border: var(--success-border);
+
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-warning-border: var(--warning-border);
+
+  --color-error: var(--error);
+  --color-error-light: var(--error-light);
+  --color-error-border: var(--error-border);
+
+  --color-card-background: var(--card-background);
+  --color-card-border: var(--card-border);
+  --color-input-background: var(--input-background);
+  --color-input-border: var(--input-border);
+  --color-input-placeholder: var(--input-placeholder);
+
+  --color-rating-filled: var(--rating-filled);
+  --color-rating-empty: var(--rating-empty);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
